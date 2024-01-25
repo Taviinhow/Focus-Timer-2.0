@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt_br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>FocusTimer - Pomodoro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="source/main.js" defer></script>
+</head>
+<body>
+    <div id="app">    
+        <div id="main-content">
+            <div id="first-contet">
+                <section id="timer">
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </section>
+            
+                <section id="controls-under-timer">
+                    <button 
+                        data-action="toggleRunning"
+                        class="ph ph-play-circle">
+                        
+                    </button>
+
+                    <button
+                        data-action="toggleRunning"
+                        class="ph ph-pause">
+                    </button>
+
+                    <button 
+                        data-action="reset"
+                        class="ph ph-stop-circle">
+                    </button>
+
+                    <button 
+                        data-action="plusFiveMinutes"
+                        class="ph ph-plus-circle">
+                    </button>
+
+                    <button 
+                        data-action="minusFiveMinutes"
+                        class="ph ph-minus-circle">
+                    </button>
+                </section>
+            </div>
+
+            <div id="second-content">
+                <section id="controls-aside-timer">
+                    <button 
+                        data-action="forestSound"
+                        class="ph ph-tree-evergreen">
+                    </button>
+
+                    <button 
+                        data-action="rainSound"
+                        class="ph ph-cloud-rain">
+                    </button>
+
+                    <button 
+                        data-action="coffeeSound"
+                        class="ph ph-coffee">
+                    </button>
+
+                    <button 
+                        data-action="firecampSound"
+                        class="ph ph-campfire">
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color:hsla(0, 0%, 100%, 1);
+    --text-color:hsla(240, 6%, 21%, 1);
+    --controls-bg-color:hsla(240, 9%, 89%, 1);
+    --controls-selection:hsla(194, 97%, 31%, 1);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#main-content{
+    display: flex;
+    gap: 18rem;
+    align-items: center;
+}
+
+#first-content{
+    padding-top: 5.8rem;
+    padding-bottom: 6.4rem;
+}
+
+#timer{
+    font-size: 9.6rem;
+    font-family:'Roboto', sans-serif;
+}
+
+#controls-under-timer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+
+#controls-under-timer button{
+    border: none;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    font-size: 4.8rem;
+    color: var(--text-color);
+}
+
+#controls-aside-timer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+}
+
+#controls-aside-timer button {
+    border:none;
+    border-radius: 2.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--controls-bg-color);
+    font-size: 6rem;
+    width: 13.8rem;
+    height: 15.2rem;
+}
+
+#controls-aside-timer button:hover {
+    background-color: var(--controls-selection);
+    color: var(--controls-bg-color);
+    transition: background .4s;
+}
+
+#controls-aside-timer button:focus {
+    background-color: var(--text-color);
+    color: white;
+    transition: background .4s;
+}
+
+/* controls */
+.running .ph-play-circle,
+html:not(.running) .ph-pause {
+    display: none;
+}
+
+
+
